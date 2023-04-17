@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+.section {
+  background-color: whitesmoke;
+}
+
+.container {
+  background-color: grey;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-inline: auto;
+  /* padding-left: 24px;
+  padding-right: 24px; */
+  padding-inline: 24px;
+}
+
+.wrapper {
+  background-color: black;
+  /* padding: 24px 0; */
+  /* padding-top: 64px;
+  padding-bottom: 64px; */
+  padding-block: 64px;
+}
