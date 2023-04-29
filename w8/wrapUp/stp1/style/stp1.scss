@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin-inline: 3rem;
+}
+.nav {
+  position: sticky;
+  z-index: 1;
+  top: 0rem;
+  max-width: 108rem;
+  margin: auto;
+  padding-inline: 0;
+  background-color: #1e1a1b;
+  color: #fff8f1;
+  container-type: inline-size;
+  container-name: nav;
+  .buttonWrapper {
+    height: 4.0625rem;
+    padding-block: 1.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav__logo,
+    a {
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #fff8f1;
+      text-decoration: none;
+    }
+  }
+  // &__logo {
+  //   padding-inline: 0;
+  //   background-color: #1e1a1b;
+  // }
+  &__button {
+    display: flex;
+    gap: 5rem;
+  }
+  // 평상시 menu 안 보이도록
+  .lt820px {
+    display: none;
+  }
+  @container nav (width<62.5rem) {
+    &__button {
+      display: none;
+    }
+    // 일정 사이즈되면 menu 보이도록 가운데 정렬 포기..
+    .lt820px {
+      display: unset;
+      img {
+        width: 2.25rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+.main {
+  .container {
+    $p-inline-val: 3rem;
+    $p-block-val: 11.25rem;
+    // background-color: blue;
+    margin-inline: auto;
+    padding-inline: $p-inline-val;
+    padding-block: $p-block-val;
+    &#video {
+      padding-inline: unset;
+      padding-block: unset;
+    }
+  }
+  &__video {
+    overflow: hidden;
+    margin: 0px auto;
+    // position: relative;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// section about 시작
+.about__info {
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1e1a1b;
+  h1 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 3.375rem;
+  }
+  p {
+    $p-block-val: 2.5rem;
+    font-family: "Apple SD Gothic Neo";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-top: $p-block-val;
+    padding-bottom: $p-block-val * 2;
+  }
+  a {
+    font-family: "Apple SD Gothic Neo";
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: #fff8f1;
+    text-decoration: none;
+  }
+}
+.enter {
+  margin-inline: auto;
+  width: fit-content;
+  background-color: #1e1a1b;
+  padding: 0.75rem 2.5rem;
+  border-radius: 2.125rem;
+}
+ul,
+li {
+  list-style: none;
+}
+.slidebox {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+.slidebox .slidelist {
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+.slidebox .slidelist .slideitem {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  width: 100%;
+  transition: all 1s;
+}
+.slidebox .slidelist .slideitem > a {
+  display: block;
+  width: auto;
+  position: relative;
+}
+.slidebox .slidelist .slideitem > a img {
+  max-width: 100%;
+}
+
+.slidebox
+  .slide-control
+  [class*="control"]
+  label {
+  position: absolute;
+  z-index: 10;
+  top: 63%;
+  transform: translateY(-50%);
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slidebox
+  .slide-control
+  [class*="control"]
+  label.prev {
+  left: -50px;
+  background: #d9d9d9 url("../img/left.png")
+    center center / 50% no-repeat;
+}
+.slidebox
+  .slide-control
+  [class*="control"]
+  label.next {
+  right: -50px;
+  background: #d9d9d9 url("../img/right.png")
+    center center / 50% no-repeat;
+}
+
+[name="slide"] {
+  display: none;
+}
+#slide01:checked ~ .slidelist .slideitem {
+  left: 0;
+}
+#slide02:checked ~ .slidelist .slideitem {
+  left: -100%;
+}
+#slide03:checked ~ .slidelist .slideitem {
+  left: -200%;
+}
+
+.slide-control [class*="control"] {
+  display: none;
+}
+#slide01:checked ~ .slide-control .control01 {
+  display: block;
+}
+#slide02:checked ~ .slide-control .control02 {
+  display: block;
+}
+#slide03:checked ~ .slide-control .control03 {
+  display: block;
+}
+// section hover 시작
+.about__hover {
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1e1a1b;
+  h1 {
+    text-transform: capitalize;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 3.375rem;
+    margin-bottom: 4.5rem;
+  }
+  .v-hover {
+    display: block;
+    height: 44.5rem;
+    .v1 {
+      position: relative;
+      // width: 33rem;
+    }
+    .v1:hover img:last-child {
+      opacity: 0;
+    }
+    .v2 {
+      position: relative;
+      margin-left: 34.5rem;
+    }
+    .v2:hover img:last-child {
+      opacity: 0;
+    }
+    .v3 {
+      position: relative;
+      margin-left: 69rem;
+    }
+    .v3:hover img:last-child {
+      opacity: 0;
+    }
+  }
+  img {
+    display: block;
+    position: absolute;
+    transition: opacity 0.5s;
+    overflow: hidden;
+  }
+}
+#history {
+  height: 108.625rem;
+  background-color: #1e1a1b;
+  .about__history {
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #fff8f1;
+    h1 {
+      text-transform: capitalize;
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 3.375rem;
+    }
+  }
+}
+.about__news {
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1e1a1b;
+  h1 {
+    text-transform: capitalize;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 3.375rem;
+  }
+}
+.about__servicelink {
+  height: 41.5rem;
+  background-color: #d7d7d7;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1e1a1b;
+  h1 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 3.375rem;
+    padding-top: 11.25rem;
+  }
+  p {
+    $p-block-value: 1.5rem;
+    font-family: "Apple SD Gothic Neo";
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 64px;
+    padding-top: $p-block-value * 3;
+    padding-bottom: $p-block-value;
+  }
+  a {
+    font-family: "Apple SD Gothic Neo";
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: #fff8f1;
+    text-decoration: none;
+  }
+  .about__linkButtons {
+    margin-inline: auto;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.25rem;
+  }
+}
+
+.footer {
+  background-color: grey;
+  color: white;
+  font-size: 0.875rem;
+  container-type: inline-size;
+  container-name: footer;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  li {
+    list-style: none;
+  }
+  svg {
+    fill: white;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  &__logo {
+    margin-bottom: 0.75rem;
+  }
+  &__extLinkWrap {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  @container footer (width < 71.25rem) {
+    .column:first-of-type {
+      grid-row: 1 / span 2;
+    }
+    .wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .column {
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem;
+  }
+}
