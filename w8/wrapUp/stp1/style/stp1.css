@@ -289,28 +289,33 @@ li {
      object-fit: cover;
 }
 
-.about__servicelink {
-  height: 41.5rem;
+#service .wrapper {
+  display: flex;
   background-color: #d7d7d7;
+}
+
+.main .about__servicelink {
+  width: 102rem;
+  height: 41.5rem;
   text-align: center;
   letter-spacing: -0.02em;
   color: #1e1a1b;
 }
-.about__servicelink h1 {
+.main .about__servicelink h1 {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 3.375rem;
   padding-top: 11.25rem;
 }
-.about__servicelink p {
+.main .about__servicelink p {
   font-family: "Apple SD Gothic Neo";
   font-weight: 700;
   font-size: 3rem;
-  line-height: 64px;
+  line-height: 4rem;
   padding-top: 4.5rem;
   padding-bottom: 1.5rem;
 }
-.about__servicelink a {
+.main .about__servicelink a {
   font-family: "Apple SD Gothic Neo";
   font-weight: 700;
   font-size: 1.25rem;
@@ -318,7 +323,7 @@ li {
   color: #fff8f1;
   text-decoration: none;
 }
-.about__servicelink .about__linkButtons {
+.main .about__servicelink .about__linkButtons {
   margin-inline: auto;
   width: -moz-fit-content;
   width: fit-content;
@@ -326,6 +331,24 @@ li {
   justify-content: space-between;
   align-items: baseline;
   gap: 1.25rem;
+}
+@media (width < 53.125rem) {
+  .main .about__servicelink h1 {
+    font-size: 2.25rem;
+  }
+  .main .about__servicelink p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  .main .about__servicelink a {
+    font-size: 1rem;
+  }
+  .main .about__servicelink .about__linkButtons {
+    display: block;
+  }
+  .main .about__servicelink .about__linkButtons .enter {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .footer {

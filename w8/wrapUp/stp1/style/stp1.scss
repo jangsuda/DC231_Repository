@@ -285,6 +285,7 @@ li {
     font-size: 3.375rem;
   }
 }
+
 .about__imgs {
   overflow: hidden;
   img {
@@ -295,43 +296,71 @@ li {
   }
 }
 
-.about__servicelink {
-  height: 41.5rem;
-  background-color: #d7d7d7;
-  text-align: center;
-  letter-spacing: -0.02em;
-  color: #1e1a1b;
-
-  h1 {
-    font-family: "Montserrat";
-    font-weight: 700;
-    font-size: 3.375rem;
-    padding-top: 11.25rem;
-  }
-  p {
-    $p-block-value: 1.5rem;
-    font-family: "Apple SD Gothic Neo";
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 64px;
-    padding-top: $p-block-value * 3;
-    padding-bottom: $p-block-value;
-  }
-  a {
-    font-family: "Apple SD Gothic Neo";
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-    color: #fff8f1;
-    text-decoration: none;
-  }
-  .about__linkButtons {
-    margin-inline: auto;
-    width: fit-content;
+#service {
+  .wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1.25rem;
+    background-color: #d7d7d7;
+  }
+}
+.main {
+  .about__servicelink {
+    width: 102rem;
+    height: 41.5rem;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #1e1a1b;
+
+    h1 {
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 3.375rem;
+      padding-top: 11.25rem;
+    }
+    p {
+      $p-block-val: 1.5rem;
+      font-family: "Apple SD Gothic Neo";
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 4rem;
+      padding-top: $p-block-val * 3;
+      padding-bottom: $p-block-val;
+    }
+    a {
+      font-family: "Apple SD Gothic Neo";
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      color: #fff8f1;
+      text-decoration: none;
+    }
+    .about__linkButtons {
+      margin-inline: auto;
+      width: fit-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1.25rem;
+    }
+    @media (width < 53.125rem) {
+      h1 {
+        font-size: 2.25rem;
+        // padding-top: 5rem;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        // padding-block: 1.5rem;
+      }
+      a {
+        font-size: 1rem;
+      }
+      .about__linkButtons {
+        display: block;
+        .enter {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
   }
 }
 
