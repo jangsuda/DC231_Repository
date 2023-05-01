@@ -114,6 +114,10 @@
   border-radius: 2.125rem;
 }
 
+.about__slide {
+  margin-inline: 3rem;
+}
+
 ul,
 li {
   list-style: none;
@@ -272,6 +276,17 @@ li {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 3.375rem;
+}
+
+.about__imgs {
+  overflow: hidden;
+}
+.about__imgs img {
+  width: 80%;
+  aspect-ratio: 16/9;
+  margin-top: 4.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about__servicelink {

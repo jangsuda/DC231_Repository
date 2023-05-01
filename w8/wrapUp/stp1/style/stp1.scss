@@ -122,6 +122,12 @@
   padding: 0.75rem 2.5rem;
   border-radius: 2.125rem;
 }
+
+// about__slide 시작
+
+.about__slide {
+  margin-inline: 3rem;
+}
 ul,
 li {
   list-style: none;
@@ -252,6 +258,7 @@ li {
     overflow: hidden;
   }
 }
+// history 시작
 #history {
   height: 108.625rem;
   background-color: #1e1a1b;
@@ -278,12 +285,23 @@ li {
     font-size: 3.375rem;
   }
 }
+.about__imgs {
+  overflow: hidden;
+  img {
+    width: 80%;
+    aspect-ratio: 16/9;
+    margin-top: 4.5rem;
+    object-fit: cover;
+  }
+}
+
 .about__servicelink {
   height: 41.5rem;
   background-color: #d7d7d7;
   text-align: center;
   letter-spacing: -0.02em;
   color: #1e1a1b;
+
   h1 {
     font-family: "Montserrat";
     font-weight: 700;
