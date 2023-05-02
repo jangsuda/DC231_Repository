@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.section {
+}
+.container {
+  margin-inline: auto;
+  max-width: 60rem;
+  padding-inline: 1.5rem;
+  background-color: greenyellow;
+}
+
+.wrapper {
+  padding-block: 2rem;
+  background-color: orangered;
+}
+#section1 {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1;
+  }
+}
+#section2 {
+  height: 200vh;
+  .square {
+    position: sticky;
+    top: 3.125rem;
+  }
+}
+#section3 {
+  height: 200vh;
+}
+.square {
+  width: 12.5rem;
+  aspect-ratio: 1/1;
+  //   -의 자식 요소 중에 $번째 아이
+  //   &: nth-child();
+  &:nth-of-type(1) {
+    background: black;
+  }
+  &:nth-of-type(2) {
+    // relative 지정된 위치에서 상하좌우 얼마나 떨어져 있을 것인지 지정
+    // absolute 자리를 아예 떠남. / 부모 요소 위치로 이동: if, 부모 전부 static, body 마지막 위치에서 작동
+    // position: fixed;
+    top: 3.125rem;
+    right: 1.5625rem;
+    background: grey;
+  }
+  &:nth-of-type(3) {
+    background: lightgray;
+  }
+}

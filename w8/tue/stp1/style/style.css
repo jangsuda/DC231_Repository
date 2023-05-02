@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 60rem;
+  padding-inline: 1.5rem;
+  background-color: greenyellow;
+}
+
+.wrapper {
+  padding-block: 2rem;
+  background-color: orangered;
+}
+
+#section1 .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 1;
+}
+
+#section2 {
+  height: 200vh;
+}
+#section2 .square {
+  position: sticky;
+  top: 3.125rem;
+}
+
+#section3 {
+  height: 200vh;
+}
+
+.square {
+  width: 12.5rem;
+  aspect-ratio: 1/1;
+}
+.square:nth-of-type(1) {
+  background: black;
+}
+.square:nth-of-type(2) {
+  top: 3.125rem;
+  right: 1.5625rem;
+  background: grey;
+}
+.square:nth-of-type(3) {
+  background: lightgray;
+}
