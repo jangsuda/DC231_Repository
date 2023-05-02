@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.section {
+  max-width: 108rem;
+  margin-inline: auto;
+}
+
 .container {
   margin-inline: 3rem;
 }
@@ -12,7 +17,6 @@
   position: sticky;
   z-index: 1;
   top: 0rem;
-  max-width: 108rem;
   margin: auto;
   padding-inline: 0;
   background-color: #1e1a1b;
