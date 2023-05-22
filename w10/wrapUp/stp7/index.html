@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>w10 - stp7</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      margin-inline: auto;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 12.5rem;
+      aspect-ratio: 1/1;
+      background-color: grey;
+      border: 1px solid #000;
+      transition: background-color 250ms
+        ease-in-out;
+    }
+    .box:hover {
+      background-color: greenyellow;
+    }
+    .box--clicked {
+      background-color: cornflowerblue;
+    }
+    .box--clicked:hover {
+      background-color: cornflowerblue;
+    }
+  </style>
+  <!-- <script src="js/jsfile.js"></script>
+  --안된다.
+  <script src="js/jsfile.js defer"></script>
+  --된다. -->
+  <body>
+    <!-- <script src="js/jsfile.js"></script>
+    --안된다. -->
+    <div class="container">
+      <!-- (#box$.box>{box$})*3 -->
+      <div id="box1" class="box">box1</div>
+      <div id="box2" class="box">box2</div>
+      <div id="box3" class="box">box2</div>
+    </div>
+  </body>
+  <script src="js/jsfile.js"></script>
+  <!-- <script src="js/jsfile.js"></script>--된다. -->
+  <!-- java가 body 뒤에 나와야 그 안의 내용이 렌더링된
+  다음에 작동됨. -->
+</html>
