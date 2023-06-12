@@ -1,0 +1,18 @@
+:root {
+  --bg: #1b1b1f;
+  --bgVariant: #46464f;
+  --txt: #e4e1e6;
+  --surface-transparent: rgb(53, 52, 56, 50%);
+  --surface: #131316;
+  --onSurface: #c8c5ca;
+  --accent: #bbc3ff;
+}
+/* :root {
+  --bg: darkblue;
+  --bgVariant: blue;
+  --txt: #e4e1e6;
+  --surface-transparent: rgba(15, 139, 247, 50%);
+  --surface: #131316;
+  --onSurface: #c8c5ca;
+  --accent: #bbc3ff;
+} */
