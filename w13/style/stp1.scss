@@ -1,6 +1,18 @@
+@import "theme.dark.css" (prefers-color-scheme: dark);
+@import "theme.light.css" (prefers-color-scheme: light);
+
+$wrapper-p-inline: 2rem;
 $min-height: 2rem;
 $progressBar-height: 1rem;
-$wrapper-p-inline: 2rem;
+
+$bg: var(--bg);
+$bgVariant: var(--bgVariant);
+$txt: var(--txt);
+$surface-transparent: var(--surface-transparent);
+$surface: var(--surface);
+$onSurface: var(--onSurface);
+$accent: var(--accent);
+
 *,
 *::before,
 *::after {
@@ -21,6 +33,8 @@ body {
   font-family: system-ui;
   font-size: 1.125rem;
   line-height: 1.5;
+  background-color: $bg;
+  color: $txt;
 }
 
 .wrapper {
@@ -42,7 +56,7 @@ header {
 // nth-child는 부모 요소의 n번째 자식을 의미
 // nth-of-type은 자식 요소 중 type 조건을 만족하는 n번째 자식
 section:nth-of-type(odd) {
-  background-color: blue;
+  background-color: $bgVariant;
 }
 
 .stickyWrapper {
@@ -68,7 +82,7 @@ aside {
   padding-inline: 1rem 1.5rem;
   height: max(100dvh, $min-height);
   border-radius: 0 1rem 1rem 0;
-  background-color: rgb(0 0 0 / 50%);
+  background-color: $surface-transparent;
   backdrop-filter: blur(0.25rem);
   // color에서 불투명도 주고   backdrop-filter: blur(0.25rem); 하면 글래스모피즘 효과
   font-size: 0.875rem;
@@ -83,21 +97,29 @@ aside {
     height: 100%;
 
     li {
-      color: white;
+      color: $onSurface;
       font-weight: 600;
       text-transform: capitalize;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.75rem;
+      transition: color 150ms ease-out;
 
       &::before {
         content: "";
         margin-top: 0.125rem;
         width: 1rem;
         height: 1rem;
-        border: 0.125rem solid white;
+        border: 0.125rem solid $onSurface;
         border-radius: 999999999px;
+        transition: border-color 150ms ease-out;
+      }
+      &:hover {
+        color: $accent;
+        &::before {
+          border-color: $accent;
+        }
       }
     }
   }
@@ -114,13 +136,13 @@ aside {
   height: $progressBar-height;
   grid-column: 1 / span 2;
   grid-row: 1;
-  background-color: rgba(64, 64, 64);
+  background-color: $surface;
   .indicator {
     position: absolute;
     inset: 0;
     transform-origin: left;
     // transform: scaleX(100%);
-    background-color: greenyellow;
+    background-color: $accent;
   }
 }
 

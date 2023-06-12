@@ -8,6 +8,8 @@ const progressBar = () => {
   console.log(progress);
   if (progress >= 0 && progress <= 1) {
     indicator.style.cssText = "transform: scaleX(" + progress + ")";
+  } else if (progress < 0) {
+    indicator.style.cssText = "transform: scaleX(0)";
   }
 };
 

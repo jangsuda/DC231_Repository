@@ -1,3 +1,5 @@
+@import "theme.dark.css" (prefers-color-scheme: dark);
+@import "theme.light.css" (prefers-color-scheme: light);
 *,
 *::before,
 *::after {
@@ -18,6 +20,8 @@ body {
   font-family: system-ui;
   font-size: 1.125rem;
   line-height: 1.5;
+  background-color: var(--bg);
+  color: var(--txt);
 }
 
 .wrapper {
@@ -37,7 +41,7 @@ header {
 }
 
 section:nth-of-type(odd) {
-  background-color: blue;
+  background-color: var(--bgVariant);
 }
 
 .stickyWrapper {
@@ -64,7 +68,7 @@ aside {
   padding-inline: 1rem 1.5rem;
   height: max(100dvh, 2rem);
   border-radius: 0 1rem 1rem 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--surface-transparent);
   -webkit-backdrop-filter: blur(0.25rem);
           backdrop-filter: blur(0.25rem);
   font-size: 0.875rem;
@@ -79,21 +83,29 @@ aside ol {
   height: 100%;
 }
 aside ol li {
-  color: white;
+  color: var(--onSurface);
   font-weight: 600;
   text-transform: capitalize;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  transition: color 150ms ease-out;
 }
 aside ol li::before {
   content: "";
   margin-top: 0.125rem;
   width: 1rem;
   height: 1rem;
-  border: 0.125rem solid white;
+  border: 0.125rem solid var(--onSurface);
   border-radius: 999999999px;
+  transition: border-color 150ms ease-out;
+}
+aside ol li:hover {
+  color: var(--accent);
+}
+aside ol li:hover::before {
+  border-color: var(--accent);
 }
 aside a {
   text-decoration: none;
@@ -107,13 +119,13 @@ aside a {
   height: 1rem;
   grid-column: 1/span 2;
   grid-row: 1;
-  background-color: rgb(64, 64, 64);
+  background-color: var(--surface);
 }
 .progressBar .indicator {
   position: absolute;
   inset: 0;
   transform-origin: left;
-  background-color: greenyellow;
+  background-color: var(--accent);
 }
 
 footer .wrapper {
