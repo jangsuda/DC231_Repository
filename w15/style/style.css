@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Noto-M";
+  src: url("../../asset/Noto-M.otf");
+}
+@font-face {
+  font-family: "Muro";
+  src: url("../../asset/Muro.otf");
+}
 * {
   box-sizing: border-box;
 }
@@ -9,7 +17,7 @@ html {
 body {
   background-color: whitesmoke;
   margin: 0;
-  font-family: Muro;
+  font-family: "Muro";
   font-size: 1.125rem;
   color: black;
 }
