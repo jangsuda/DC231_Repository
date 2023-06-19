@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  font-family: Muro;
+  font-size: 1.125rem;
+  color: black;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav_logo .nav_logoImg {
+  width: 2rem;
+}
+
+.nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.5rem;
+  align-items: center;
+}
+
+.nav .nav_menus {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-top: 0.125rem;
+}
+
+.nav {
+  background-color: #fbf04f;
+  padding-inline: 1.5rem;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+  padding-top: 0.125rem;
+}
+.nav_menus a:hover {
+  opacity: 20%;
+}

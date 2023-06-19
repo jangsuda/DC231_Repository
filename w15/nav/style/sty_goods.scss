@@ -1,0 +1,184 @@
+$p-block: 1.25rem;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  font-family: Muro;
+  font-size: 1.125rem;
+  color: black;
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  .nav_logoImg {
+    width: 2rem;
+  }
+}
+.nav .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.5rem;
+  align-items: center;
+}
+
+.nav .nav_menus {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-top: 0.125rem;
+}
+
+.nav {
+  background-color: #fbf04f;
+  padding-inline: 1.5rem;
+  a {
+    text-decoration: none;
+    color: black;
+    padding-top: 0.125rem;
+  }
+  &_menus a:hover {
+    opacity: 20%;
+  }
+}
+
+.wrp_cards {
+  padding-bottom: 2.25rem;
+  padding-inline: 1.5rem;
+  h1 {
+    margin-top: $p-block * 2;
+    padding-block: $p-block;
+    text-align: center;
+    font-size: 2.25rem;
+    letter-spacing: 0.05em;
+    color: #fbf04f;
+    background-color: black;
+    border-radius: 62.4375rem;
+  }
+}
+.card_title {
+  width: 20rem;
+  margin: auto;
+  padding-top: $p-block * 2;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.card {
+  max-width: 25rem;
+  border: 0.0781rem solid black;
+  border-radius: 1rem;
+  background-color: white;
+  overflow: hidden;
+  transition: transform 500ms ease,
+    box-shadow 500ms ease,
+    background-color 250ms ease-in-out;
+  &:hover {
+    background-color: #fbf04f;
+    transform: scale(1.01);
+    box-shadow: 0 0.5rem 0.75rem 0.375rem
+        rgba(0, 0, 0, 0.15),
+      0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+    .card {
+      &_img {
+        filter: grayscale(0);
+      }
+    }
+  }
+  &.card--clicked {
+    background: #d72f25;
+  }
+  &.card--clicked:hover {
+    background-color: #d72f25;
+  }
+  &_img {
+    width: 100%;
+    object-fit: cover;
+    padding: $p-block * 2;
+    filter: grayscale(100%);
+    transition: filter 500ms ease;
+  }
+
+  &_txt {
+    font-family: Apple SD Gothic Neo;
+    padding-inline: 1rem;
+    h3 {
+      // color: black;
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 28px;
+      margin-block: 0;
+      text-align: center;
+    }
+    li {
+      text-wrap: balance;
+      padding-top: 0.5rem;
+    }
+  }
+  .card_btns {
+    padding-block: $p-block/2;
+    display: flex;
+    justify-content: end;
+  }
+  .card_btn {
+    cursor: pointer;
+    padding: 0rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: black;
+    color: #fbf04f;
+    border-radius: 62.4375rem;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 40%;
+    }
+  }
+}
+
+@media (width < 90rem) {
+  .cards {
+    // display: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main {
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.slides {
+  color: #d72f25;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 90%;
+    width: 100%;
+  }
+}
